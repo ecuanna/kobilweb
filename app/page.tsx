@@ -190,13 +190,17 @@ function PhoneMockup({
   name: string;
 }) {
   return (
-    <div className="phoneMockup">
-      <img
-        className="phoneScreen"
-        src={screen}
-        alt={`${name} mobile app preview`}
-        loading="lazy"
-      />
+    <div className="phoneMockup" aria-label={`${name} mobile app preview`}>
+      <div className="phoneViewport">
+        <img
+          className="phoneScreen"
+          src={screen}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+        />
+      </div>
+
       <img
         className="phoneFrame"
         src={A.phoneFrame}
