@@ -6,7 +6,7 @@ const A = {
   logo: '/assets/logos/KOBIL_logo 1.svg',
   logoFooter: 'https://www.figma.com/api/mcp/asset/23ebc7a7-718a-4189-8a5a-81447bd804cf',
 
-  venture: 'https://www.figma.com/api/mcp/asset/b2a426f3-fb8e-4082-a044-535a8269a85d',
+  venture: '/assets/logos/logo-ventures.svg',
 
   // Kart logoları
   forbes: '/assets/logos/logo-forbes.svg',
