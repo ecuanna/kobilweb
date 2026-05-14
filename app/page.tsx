@@ -3,8 +3,6 @@ import type { ReactNode } from 'react';
 const A = {
   hero: 'https://www.figma.com/api/mcp/asset/91f9f214-bb42-4e52-8ea1-b1f812a5a0b6',
 
-  // Logo dosyalarını GitHub'da public/assets/logos içine koyarsan path böyle olmalı.
-  // public/assets/logos/logo-kobil.svg -> /assets/logos/logo-kobil.svg
   logo: 'https://www.figma.com/api/mcp/asset/8732cb1e-277e-4bae-8715-785487be6976',
   logoFooter: 'https://www.figma.com/api/mcp/asset/23ebc7a7-718a-4189-8a5a-81447bd804cf',
 
@@ -17,7 +15,6 @@ const A = {
   caareLogo: 'https://www.figma.com/api/mcp/asset/b0ba889f-78a8-42fb-b0de-0fe13da03b94',
   skorLogo: 'https://www.figma.com/api/mcp/asset/cc7ec769-a283-4ba8-a795-5d16ce10c176',
 
-  // Bu 3 logo için dosya yüklemediysen kartta logo alanı boş görünür, text basmaz.
   neomLogo: '/assets/logos/logo-neom.svg',
   mercanLogo: '/assets/logos/logo-mercan.svg',
   pawLogo: '/assets/logos/logo-paw.svg',
