@@ -42,3 +42,32 @@
 .logoSkor{max-width:clamp(110px,13vw,163px)}
 .nav>.siteLogo{width:clamp(110px,12vw,150px);height:auto}
 .footerTop>.footerLogo{width:clamp(90px,10vw,106px);height:auto}
+/* FINAL HEADER LOGO FIX */
+.nav > img.siteLogo,
+.siteLogo {
+  width: clamp(110px, 12vw, 150px) !important;
+  height: 30px !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.footerTop > img.footerLogo,
+.footerLogo {
+  width: clamp(90px, 10vw, 106px) !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.brandLogo {
+  width: auto !important;
+  height: auto !important;
+  max-height: 82px !important;
+  object-fit: contain !important;
+}
