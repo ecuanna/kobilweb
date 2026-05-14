@@ -3,7 +3,7 @@ const A = {
   logo: 'https://www.figma.com/api/mcp/asset/8732cb1e-277e-4bae-8715-785487be6976',
   logoFooter: 'https://www.figma.com/api/mcp/asset/23ebc7a7-718a-4189-8a5a-81447bd804cf',
   venture: 'https://www.figma.com/api/mcp/asset/b2a426f3-fb8e-4082-a044-535a8269a85d',
-  forbes: 'https://www.figma.com/api/mcp/asset/cbb33716-4646-43d6-b58f-3fd68a6dedbb',
+  forbes: "/assets/logos/logo-forbes.svg",
   sparkLogo: 'https://www.figma.com/api/mcp/asset/141a759c-bad5-49eb-b204-5d7d2ebc08c2',
   esappLogo: "/assets/logos/logo-esapp.svg",
   caareLogo: 'https://www.figma.com/api/mcp/asset/b0ba889f-78a8-42fb-b0de-0fe13da03b94',
