@@ -10,7 +10,7 @@ const A = {
 
   // Kart logoları
   forbes: '/assets/logos/logo-forbes.svg',
-  sparkLogo: 'https://www.figma.com/api/mcp/asset/141a759c-bad5-49eb-b204-5d7d2ebc08c2',
+  sparkLogo: '/assets/logos/logo-spark.svg',
   esappLogo: '/assets/logos/logo-esapp.svg',
   caareLogo: '/assets/logos/logo_care.svg',
   skorLogo: '/assets/logos/logo-skor.svg',
