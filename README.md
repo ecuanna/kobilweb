@@ -4,8 +4,6 @@ Logoların sünmemesi için `app/globals.css` içinde logolarda `object-fit: con
 
 ## Son logo düzeltmesi
 
-Figma'nın export ettiği bazı logo asset'lerinin intrinsic canvas oranı hatalı göründüğü için header ve kart logoları artık `<img>` olarak değil, `KobilLogo` ve `BrandLogo` component'leriyle render ediliyor. Bu sayede hiçbir logoda browser'ın hatalı image ratio hesaplamasına bağlı sünme/taşma oluşmaz.
-
 Değişen dosyalar:
 
 - `app/page.tsx`: `KobilLogo` ve `BrandLogo` component'leri eklendi; logo `<img>` kullanımları bu component'lere çevrildi.
