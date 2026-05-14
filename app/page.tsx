@@ -5,7 +5,7 @@ const A = {
   venture: 'https://www.figma.com/api/mcp/asset/b2a426f3-fb8e-4082-a044-535a8269a85d',
   forbes: 'https://www.figma.com/api/mcp/asset/cbb33716-4646-43d6-b58f-3fd68a6dedbb',
   sparkLogo: 'https://www.figma.com/api/mcp/asset/141a759c-bad5-49eb-b204-5d7d2ebc08c2',
-  esappLogo: 'https://www.figma.com/api/mcp/asset/e84708eb-7849-4b40-9ad6-a33aeb6c34d2',
+  esappLogo: '/public/assets/logos/logo-esapp.svg',
   caareLogo: 'https://www.figma.com/api/mcp/asset/b0ba889f-78a8-42fb-b0de-0fe13da03b94',
   skorLogo: 'https://www.figma.com/api/mcp/asset/cc7ec769-a283-4ba8-a795-5d16ce10c176',
   card1: 'https://www.figma.com/api/mcp/asset/5bf2286e-67da-46f0-8551-0357b9951c82',
