@@ -28,7 +28,7 @@ const A = {
   card7: 'https://www.figma.com/api/mcp/asset/9507d00d-db4e-4ea8-aa2c-c7429c8d97fb',
   card8: 'https://www.figma.com/api/mcp/asset/54f6dba2-945a-41dc-b113-1a8ed2848335',
 
-  phone1: '/assets/phone/phone-1.svg',
+  phone1: '/assets/phone/phone1-spark.svg',
   phone2: 'https://www.figma.com/api/mcp/asset/a80de6e3-b197-4147-bf46-a032d7668b04',
   phone3: 'https://www.figma.com/api/mcp/asset/a923c391-ff8a-403f-bab9-00b831214474',
   phone4: 'https://www.figma.com/api/mcp/asset/69e9d094-9333-4986-b385-7c73aafd17f7',
