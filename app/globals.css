@@ -340,7 +340,7 @@ img {
 .visual {
   margin-top: auto;
   height: 319px;
-  border-radius: 12px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
   background: #dfe6f3;
