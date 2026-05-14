@@ -8,6 +8,7 @@ const A = {
 
   venture: '/assets/logos/logo-ventures.svg',
 
+  phoneFrame: '/assets/mockups/phone-frame.svg',
   // Kart logoları
   forbes: '/assets/logos/logo-forbes.svg',
   sparkLogo: '/assets/logos/logo-spark.svg',
