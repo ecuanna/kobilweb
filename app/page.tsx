@@ -13,7 +13,7 @@ const A = {
   sparkLogo: 'https://www.figma.com/api/mcp/asset/141a759c-bad5-49eb-b204-5d7d2ebc08c2',
   esappLogo: '/assets/logos/logo-esapp.svg',
   caareLogo: '/assets/logos/logo_care.svg',
-  skorLogo: 'https://www.figma.com/api/mcp/asset/cc7ec769-a283-4ba8-a795-5d16ce10c176',
+  skorLogo: '/assets/logos/logo-skor.svg',
 
   neomLogo: '/assets/logos/logo-neom.svg',
   mercanLogo: '/assets/logos/logo-mercan.svg',
