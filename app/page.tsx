@@ -8,7 +8,10 @@ const A = {
 
   venture: '/assets/logos/logo-ventures.svg',
 
+  // GitHub'da şu dosya olmalı:
+  // public/assets/mockups/phone-frame.svg
   phoneFrame: '/assets/mockups/phone-frame.svg',
+
   // Kart logoları
   forbes: '/assets/logos/logo-forbes.svg',
   sparkLogo: '/assets/logos/logo-spark.svg',
@@ -179,6 +182,32 @@ function BrandLogo({
   );
 }
 
+function PhoneMockup({
+  screen,
+  name,
+}: {
+  screen: string;
+  name: string;
+}) {
+  return (
+    <div className="phoneMockup">
+      <img
+        className="phoneScreen"
+        src={screen}
+        alt={`${name} mobile app preview`}
+        loading="lazy"
+      />
+      <img
+        className="phoneFrame"
+        src={A.phoneFrame}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 function VentureCard({ item }: { item: (typeof ventures)[number] }) {
   return (
     <article className="ventureCard">
@@ -197,9 +226,7 @@ function VentureCard({ item }: { item: (typeof ventures)[number] }) {
 
       <div className="visual">
         <img className="photo" src={item.image} alt="" />
-        <div className="phone">
-          <img src={item.phone} alt="Mobile app preview" />
-        </div>
+        <PhoneMockup screen={item.phone} name={item.name} />
       </div>
     </article>
   );
