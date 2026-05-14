@@ -12,7 +12,7 @@ const A = {
   forbes: '/assets/logos/logo-forbes.svg',
   sparkLogo: 'https://www.figma.com/api/mcp/asset/141a759c-bad5-49eb-b204-5d7d2ebc08c2',
   esappLogo: '/assets/logos/logo-esapp.svg',
-  caareLogo: 'https://www.figma.com/api/mcp/asset/b0ba889f-78a8-42fb-b0de-0fe13da03b94',
+  caareLogo: '/assets/logos/logo_care.svg',
   skorLogo: 'https://www.figma.com/api/mcp/asset/cc7ec769-a283-4ba8-a795-5d16ce10c176',
 
   neomLogo: '/assets/logos/logo-neom.svg',
