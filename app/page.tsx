@@ -1,4 +1,4 @@
-const A = {
+const logos = {
   hero: 'https://www.figma.com/api/mcp/asset/91f9f214-bb42-4e52-8ea1-b1f812a5a0b6',
   logo: 'https://www.figma.com/api/mcp/asset/8732cb1e-277e-4bae-8715-785487be6976',
   logoFooter: 'https://www.figma.com/api/mcp/asset/23ebc7a7-718a-4189-8a5a-81447bd804cf',
