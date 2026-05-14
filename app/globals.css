@@ -626,9 +626,11 @@ details p {
     line-height: 38px;
   }
 
-  .phone {
-    right: 28px;
-  }
+.phone {
+  right: 28px;
+  width: 112px;
+  height: 200px;
+}
 
   .footerBottom > div {
     flex-wrap: wrap;
@@ -657,6 +659,7 @@ details p {
   }
 
   .phone {
+    right: 24px;
     width: 92px;
     height: 165px;
   }
