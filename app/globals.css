@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Instrument+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --blue: #2962f6;
@@ -35,7 +35,21 @@ img {
   max-width: 100%;
 }
 
-/* HEADER */
+button {
+  font: inherit;
+}
+
+/* PAGE MODE SWITCH */
+
+.desktopOnly {
+  display: block;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* DESKTOP HEADER */
 
 .siteHeader {
   position: sticky;
@@ -119,7 +133,7 @@ img {
   box-shadow: none;
 }
 
-/* LOCAL LOGO FIXES */
+/* LOGOS */
 
 .siteLogo {
   width: clamp(110px, 12vw, 150px);
@@ -184,11 +198,7 @@ img {
 }
 
 .logoFrame.logoText,
-.logoFrame.logoMark {
-  width: clamp(80px, 10vw, 108px);
-  aspect-ratio: 1 / 1;
-}
-
+.logoFrame.logoMark,
 .logoFrame.logoMarkAlt {
   width: clamp(80px, 10vw, 108px);
   aspect-ratio: 1 / 1;
@@ -205,7 +215,7 @@ img {
   display: block;
 }
 
-/* HERO */
+/* DESKTOP HERO */
 
 .hero {
   position: relative;
@@ -274,7 +284,7 @@ img {
   background: rgba(255, 255, 255, 0.75);
 }
 
-/* CARDS */
+/* DESKTOP CARDS */
 
 .gridWrap {
   margin: -294px auto 0;
@@ -368,7 +378,7 @@ img {
   pointer-events: none;
 }
 
-/* PHONE MOCKUP */
+/* SHARED PHONE MOCKUP */
 
 .phoneMockup {
   position: absolute;
@@ -411,7 +421,7 @@ img {
   z-index: 2;
 }
 
-/* FAQ */
+/* DESKTOP FAQ */
 
 .faq {
   width: min(1264px, calc(100% - 96px));
@@ -466,7 +476,7 @@ details p {
   font: 20px / 26px 'Instrument Sans', sans-serif;
 }
 
-/* CTA */
+/* DESKTOP CTA */
 
 .cta {
   width: min(1360px, calc(100% - 80px));
@@ -507,7 +517,7 @@ details p {
   font: 18px / 26px 'Instrument Sans', sans-serif;
 }
 
-/* FOOTER */
+/* DESKTOP FOOTER */
 
 .footer {
   width: min(1360px, calc(100% - 80px));
@@ -567,9 +577,524 @@ details p {
   font: 12px / 18px Inter, sans-serif;
 }
 
-/* RESPONSIVE */
+/* MOBILE PAGE */
 
-@media (max-width: 980px) {
+.mobileVenturePage {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* MOBILE HEADER */
+
+.mobileHeader {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(245, 247, 252, 0.96);
+  backdrop-filter: blur(16px);
+}
+
+.mobileAnnouncement {
+  height: 40px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  font: 500 11px / 16px Inter, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mobileAnnouncement span {
+  font-weight: 700;
+  background: linear-gradient(90deg, #3ebffc, #2962f6, #ca80f4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mobileAnnouncement strong {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d4c6a;
+  font-weight: 600;
+}
+
+.mobileAnnouncement a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.mobileNav {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileSiteLogo {
+  width: 80px;
+  height: 24px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.mobileMenuButton {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobileMenuButton span {
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+/* MOBILE HERO */
+
+.mobileHero {
+  position: relative;
+  width: calc(100% - 24px);
+  max-width: 393px;
+  min-height: 701px;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  color: #fff;
+  background: #2b1bff;
+}
+
+.mobileHeroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileHeroContent {
+  position: relative;
+  z-index: 1;
+  padding: 48px 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mobileVentureLogo {
+  width: 151px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.mobileHeroContent p {
+  margin: 0 0 12px;
+  font: 600 14px / 20px 'Instrument Sans', sans-serif;
+}
+
+.mobileHeroContent h1 {
+  width: min(337px, 100%);
+  margin: 0;
+  font: 700 32px / 40px 'Instrument Sans', sans-serif;
+  letter-spacing: -0.4px;
+}
+
+.mobileTicker {
+  width: 100%;
+  margin-top: 30px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: visible;
+  color: rgba(255, 255, 255, 0.8);
+  font: 18px / 26px 'Instrument Sans', sans-serif;
+  white-space: nowrap;
+  transform: translateX(-120px);
+}
+
+.mobileTicker i {
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* MOBILE CARDS */
+
+.mobileCardsWrap {
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 48px);
+  max-width: 345px;
+  margin: -296px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileVentureCard {
+  width: 100%;
+  min-height: 524px;
+  padding: 18px;
+  border-radius: 7px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 14px 36px rgba(17, 36, 74, 0.04);
+}
+
+.mobileCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mobileCardTop span {
+  font: 400 16px / 23px 'Instrument Sans', sans-serif;
+  color: #000;
+}
+
+.mobileCardTop strong {
+  font: 600 12px / 18px Inter, sans-serif;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+}
+
+.mobileBrandSlot {
+  height: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mobileBrandSlot .logoFrame.logoForbes {
+  width: 94px;
+}
+
+.mobileBrandSlot .logoFrame.logoSpark {
+  width: 112px;
+}
+
+.mobileBrandSlot .logoFrame.logoEsapp {
+  width: 128px;
+}
+
+.mobileBrandSlot .logoFrame.logoCaare {
+  width: 92px;
+}
+
+.mobileBrandSlot .logoFrame.logoSkor {
+  width: 96px;
+}
+
+.mobileBrandSlot .logoFrame.logoText,
+.mobileBrandSlot .logoFrame.logoMark,
+.mobileBrandSlot .logoFrame.logoMarkAlt {
+  width: 48px;
+}
+
+.mobileEyebrow {
+  margin: 0;
+  font: 400 14px / 20px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.mobileVentureCard h3 {
+  margin: 0;
+  font: 600 20px / 26px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.mobileCardBody {
+  margin: 0;
+  font: 400 14px / 20px 'Instrument Sans', sans-serif;
+  color: var(--muted);
+}
+
+.mobileVisual {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-top: auto;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #dfe6f3;
+}
+
+.mobilePhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileVisual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 98, 246, 0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mobileVisual .phoneMockup {
+  right: 46px;
+  bottom: -12px;
+  width: 82px;
+  height: 147px;
+  z-index: 2;
+  filter: drop-shadow(-6px 9px 4px rgba(12, 40, 97, 0.27));
+}
+
+.mobileVisual .phoneViewport {
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 17px;
+}
+
+.mobileVisual .phoneFrame {
+  object-fit: fill;
+}
+
+.mobileVisual .phoneScreen {
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* MOBILE FAQ */
+
+.mobileFaq {
+  width: calc(100% - 48px);
+  max-width: 345px;
+  margin: 40px auto 0;
+}
+
+.mobileFaq h2 {
+  margin: 0 0 24px;
+  font: 700 28px / 36px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.mobileFaqList {
+  border-top: 1px solid var(--line);
+}
+
+.mobileFaqList details {
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobileFaqList summary {
+  min-height: 64px;
+  height: auto;
+  padding: 18px 0;
+  font: 500 16px / 22px 'Instrument Sans', sans-serif;
+}
+
+.mobileFaqList p {
+  margin: 0 0 20px;
+  padding: 0;
+  font: 400 15px / 22px 'Instrument Sans', sans-serif;
+  color: var(--muted);
+}
+
+/* MOBILE CTA */
+
+.mobileCta {
+  width: calc(100% - 24px);
+  max-width: 369px;
+  min-height: 360px;
+  margin: 56px auto 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #e6ebf5;
+}
+
+.mobileCta > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileCta > div {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 40px);
+}
+
+.mobileCta h2 {
+  margin: 0;
+  font: 700 28px / 36px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.mobileCta h2 span {
+  color: var(--blue);
+}
+
+.mobileCta p {
+  margin: 18px 0 28px;
+  font: 400 16px / 24px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+/* MOBILE FOOTER */
+
+.mobileFooter {
+  width: calc(100% - 24px);
+  max-width: 369px;
+  margin: 12px auto 24px;
+  padding: 24px;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobileFooterLogo {
+  width: 116px;
+  height: 37px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.mobileFooterMenus {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileFooterMenus details {
+  padding: 0;
+  border: 0;
+}
+
+.mobileFooterMenus summary {
+  height: auto;
+  min-height: 18px;
+  padding: 0;
+  font: 700 14px / 16px Inter, sans-serif;
+  color: var(--ink);
+}
+
+.mobileFooterMenus summary::after {
+  content: '⌄';
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.mobileFooterMenus details[open] summary::after {
+  content: '⌃';
+}
+
+.mobileFooterMenus details > div {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileFooterMenus a {
+  font: 400 14px / 16px Inter, sans-serif;
+  color: #3d4c6a;
+}
+
+.mobileFooterCtas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mobileFooterCtas .button {
+  height: 40px;
+  font-size: 12px;
+  padding: 0 14px;
+}
+
+.mobileFooterContact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mobileFooterContact a {
+  font: 400 12px / 18px 'Instrument Sans', sans-serif;
+  color: #3d4c6a;
+}
+
+.mobileSocials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mobileSocials span {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font: 700 11px / 1 Inter, sans-serif;
+  color: var(--ink);
+}
+
+.mobileLegal {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: #3d4c6a;
+}
+
+.mobileLegal p,
+.mobileLegal span {
+  margin: 0;
+  font: 400 12px / 18px Inter, sans-serif;
+}
+
+/* DESKTOP TABLET ADJUSTMENTS */
+
+@media (max-width: 980px) and (min-width: 769px) {
   .announcement b,
   .links {
     display: none;
@@ -674,80 +1199,59 @@ details p {
   }
 }
 
+/* MOBILE SWITCH */
+
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+
+  body {
+    background: var(--bg);
+  }
+}
+
 @media (max-width: 560px) {
-  .hero {
-    width: 100%;
-    height: 560px;
-    margin: 0;
-    border-radius: 0;
+  .mobileHero {
+    width: calc(100% - 24px);
+    min-height: 701px;
   }
 
-  .gridWrap,
-  .faq {
-    margin-top: -120px;
+  .mobileCardsWrap {
+    width: calc(100% - 48px);
+    margin-top: -296px;
   }
 
-  .ventureCard {
-    padding: 22px;
+  .mobileVisual .phoneMockup {
+    right: 46px;
+  }
+}
+
+@media (max-width: 390px) {
+  .mobileCardsWrap,
+  .mobileFaq {
+    width: calc(100% - 32px);
   }
 
-  .visual {
-    height: 250px;
+  .mobileHeroContent h1 {
+    font-size: 30px;
+    line-height: 38px;
   }
 
-  .phoneMockup {
-    right: 24px;
-    width: 92px;
-    height: 165px;
+  .mobileVentureCard {
+    padding: 16px;
   }
 
-  .phoneViewport {
-    left: 6px;
-    top: 6px;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
-    border-radius: 19px;
+  .mobileVisual .phoneMockup {
+    right: 38px;
   }
 
-  .footerMenus {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 36px 24px;
-  }
-
-  .cardTop {
-    font-size: 16px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .brandSlot {
-    height: 56px;
-    min-height: 56px;
-  }
-
-  .logoFrame.logoForbes {
-    width: 140px;
-  }
-
-  .logoFrame.logoSpark {
-    width: 145px;
-  }
-
-  .logoFrame.logoEsapp {
-    width: 165px;
-  }
-
-  .logoFrame.logoCaare {
-    width: 120px;
-  }
-
-  .logoFrame.logoSkor {
-    width: 130px;
+  .mobileFooterCtas {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
