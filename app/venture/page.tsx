@@ -236,34 +236,206 @@ function VentureCard({ item }: { item: (typeof ventures)[number] }) {
   );
 }
 
-export default function Page() {
+function MobileVentureCard({ item }: { item: (typeof ventures)[number] }) {
   return (
-    <main>
-      <header className="siteHeader">
-        <div className="announcement">
-          <span>New!</span>
-          KOBIL AI Agent Trust Infrastructure
-          <a>Learn More</a>
-          <b>EN⌄</b>
+    <article className="mobileVentureCard">
+      <div className="mobileCardTop">
+        <span>{item.no}</span>
+        <strong>{item.tag}</strong>
+      </div>
+
+      <div className="mobileBrandSlot">
+        <BrandLogo logo={item.logo} logoClass={item.logoClass} name={item.name} />
+      </div>
+
+      <p className="mobileEyebrow">{item.name}</p>
+      <h3>{item.title}</h3>
+      <p className="mobileCardBody">{item.body}</p>
+
+      <div className="mobileVisual">
+        <img className="mobilePhoto" src={item.image} alt="" loading="lazy" />
+        <PhoneMockup screen={item.phone} name={item.name} />
+      </div>
+    </article>
+  );
+}
+
+function VentureHeader() {
+  return (
+    <header className="siteHeader">
+      <div className="announcement">
+        <span>New!</span>
+        KOBIL AI Agent Trust Infrastructure
+        <a>Learn More</a>
+        <b>EN⌄</b>
+      </div>
+
+      <nav className="nav">
+        <a href="/" aria-label="KOBIL home">
+          <img className="siteLogo" src={A.logo} alt="KOBIL" />
+        </a>
+
+        <div className="links">
+          <a href="/products">Products</a>
+          <a href="/solutions">Solutions</a>
+          <a href="/industries">Industries</a>
+          <a href="/venture" className="active">Ventures</a>
+          <a href="/resources">Resources</a>
+          <a href="/company">Company</a>
         </div>
 
-        <nav className="nav">
-          <a href="#" aria-label="KOBIL home">
-            <img className="siteLogo" src={A.logo} alt="KOBIL" />
-          </a>
+        <Button>Book a demo</Button>
+      </nav>
+    </header>
+  );
+}
 
-          <div className="links">
-            <a>Products</a>
-            <a>Solutions</a>
-            <a>Industries</a>
-            <a className="active">Ventures</a>
-            <a>Resources</a>
-            <a>Company</a>
-          </div>
+function MobileHeader() {
+  return (
+    <header className="mobileHeader">
+      <div className="mobileAnnouncement">
+        <span>New!</span>
+        <strong>KOBIL AI Agent Trust Infrastructure</strong>
+        <a>Learn More</a>
+      </div>
 
-          <Button>Book a demo</Button>
-        </nav>
-      </header>
+      <nav className="mobileNav">
+        <a href="/" aria-label="KOBIL home">
+          <img className="mobileSiteLogo" src={A.logo} alt="KOBIL" />
+        </a>
+
+        <button className="mobileMenuButton" type="button" aria-label="Open menu">
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+    </header>
+  );
+}
+
+function VentureFooter() {
+  return (
+    <footer id="contact" className="footer">
+      <div className="footerTop">
+        <a href="/" aria-label="KOBIL home">
+          <img className="footerLogo" src={A.logoFooter} alt="KOBIL" />
+        </a>
+
+        <div className="footerMenus">
+          {[
+            'Company',
+            'Products',
+            'Solutions',
+            'Industries',
+            'Resources',
+            'KOBIL Ventures',
+          ].map((title, idx) => (
+            <div key={title}>
+              <h4>{title}</h4>
+              <a>{idx === 0 ? 'About Us' : 'mPower'}</a>
+              <a>{idx === 1 ? 'IDentity' : 'FAQs'}</a>
+              <a>{idx === 5 ? 'Spark Connect SuperApp' : 'SuperApp Platform'}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="footerBottom">
+        <div>
+          <Button>Contact us</Button>
+          <Button light>Book a free demo</Button>
+        </div>
+
+        <p>+49 (0) 6241 3004 0 &nbsp;&nbsp; hello@kobil.com</p>
+      </div>
+
+      <div className="legal">
+        © 2026 KOBIL. All Rights Reserved.
+        <span>Privacy | Imprint & Disclaimer | Responsible Disclosure</span>
+      </div>
+    </footer>
+  );
+}
+
+function MobileFooter() {
+  const footerGroups = [
+    {
+      title: 'Company',
+      links: ['About Us', 'FAQs'],
+      open: true,
+    },
+    {
+      title: 'Products',
+      links: ['mPower', 'IDentity', 'SuperApp Platform'],
+    },
+    {
+      title: 'Solutions',
+      links: ['FAQs', 'SuperApp Platform'],
+    },
+    {
+      title: 'Industries',
+      links: ['mPower', 'SuperApp Platform'],
+    },
+    {
+      title: 'Resources',
+      links: ['FAQs', 'SuperApp Platform'],
+    },
+    {
+      title: 'KOBIL Ventures',
+      links: ['Spark Connect SuperApp', 'SuperApp Platform'],
+    },
+  ];
+
+  return (
+    <footer className="mobileFooter" id="contact-mobile">
+      <a href="/" aria-label="KOBIL home">
+        <img className="mobileFooterLogo" src={A.logo} alt="KOBIL" />
+      </a>
+
+      <div className="mobileFooterMenus">
+        {footerGroups.map((group) => (
+          <details key={group.title} open={group.open}>
+            <summary>{group.title}</summary>
+            <div>
+              {group.links.map((link) => (
+                <a key={link}>{link}</a>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <div className="mobileFooterCtas">
+        <Button>Contact us</Button>
+        <Button light>Book a free demo</Button>
+      </div>
+
+      <div className="mobileFooterContact">
+        <a href="tel:+49624130040">+49 (0) 6241 3004 0</a>
+        <a href="mailto:hello@kobil.com">hello@kobil.com</a>
+      </div>
+
+      <div className="mobileSocials">
+        <span>in</span>
+        <span>f</span>
+        <span>x</span>
+        <span>▶</span>
+      </div>
+
+      <div className="mobileLegal">
+        <p>© 2026 KOBIL. All Rights Reserved.</p>
+        <span>Privacy | Imprint & Disclaimer</span>
+        <span>Responsible Disclosure</span>
+      </div>
+    </footer>
+  );
+}
+
+function VentureDesktop() {
+  return (
+    <>
+      <VentureHeader />
 
       <section className="hero">
         <img className="heroBg" src={A.hero} alt="" />
@@ -345,45 +517,92 @@ export default function Page() {
         </div>
       </section>
 
-      <footer id="contact" className="footer">
-        <div className="footerTop">
-          <a href="#" aria-label="KOBIL home">
-            <img className="footerLogo" src={A.logoFooter} alt="KOBIL" />
-          </a>
+      <VentureFooter />
+    </>
+  );
+}
 
-          <div className="footerMenus">
-            {[
-              'Company',
-              'Products',
-              'Solutions',
-              'Industries',
-              'Resources',
-              'KOBIL Ventures',
-            ].map((title, idx) => (
-              <div key={title}>
-                <h4>{title}</h4>
-                <a>{idx === 0 ? 'About Us' : 'mPower'}</a>
-                <a>{idx === 1 ? 'IDentity' : 'FAQs'}</a>
-                <a>{idx === 5 ? 'Spark Connect SuperApp' : 'SuperApp Platform'}</a>
-              </div>
-            ))}
+function VentureMobile() {
+  return (
+    <div className="mobileVenturePage">
+      <MobileHeader />
+
+      <section className="mobileHero">
+        <img className="mobileHeroBg" src={A.hero} alt="" />
+        <div className="mobileHeroContent">
+          <img className="mobileVentureLogo" src={A.venture} alt="Ventures" />
+
+          <p>YOUR TECHNOLOGY PARTNER</p>
+          <h1>Build with KOBIL trusted digital platforms</h1>
+
+          <div className="mobileTicker">
+            <span>Media Super App</span>
+            <i />
+            <span>Telecom Super App</span>
+            <i />
+            <span>Mobility Super App</span>
+            <i />
+            <span>Espor Super App</span>
           </div>
         </div>
+      </section>
 
-        <div className="footerBottom">
-          <div>
-            <Button>Contact us</Button>
-            <Button light>Book a free demo</Button>
-          </div>
+      <section className="mobileCardsWrap">
+        {ventures.map((item) => (
+          <MobileVentureCard key={item.no} item={item} />
+        ))}
+      </section>
 
-          <p>+49 (0) 6241 3004 0 &nbsp;&nbsp; hello@kobil.com</p>
+      <section className="mobileFaq">
+        <h2>FAQ Ventures</h2>
+
+        <div className="mobileFaqList">
+          {faq.map((q, i) => (
+            <details key={q} open={i === 4}>
+              <summary>{q}</summary>
+              {i === 4 && (
+                <p>
+                  SuperApp can be used from the shared data center or it can be
+                  deployed on desired location. Mini Apps and other web assets
+                  can be deployed to any desired server.
+                </p>
+              )}
+            </details>
+          ))}
         </div>
+      </section>
 
-        <div className="legal">
-          © 2026 KOBIL. All Rights Reserved.
-          <span>Privacy | Imprint & Disclaimer | Responsible Disclosure</span>
+      <section className="mobileCta">
+        <img src={A.cta} alt="" />
+        <div>
+          <h2>
+            <span>Your Platform Is Ready.</span>
+            <br />
+            Your Idea Just Needs to Start.
+          </h2>
+          <p>
+            KOBIL Ventures gives founders the infrastructure and support to
+            build trusted SuperApps without starting from scratch.
+          </p>
+          <Button light>Learn More</Button>
         </div>
-      </footer>
+      </section>
+
+      <MobileFooter />
+    </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <main>
+      <div className="desktopOnly">
+        <VentureDesktop />
+      </div>
+
+      <div className="mobileOnly">
+        <VentureMobile />
+      </div>
     </main>
   );
 }
