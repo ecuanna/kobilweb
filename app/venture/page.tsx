@@ -8,8 +8,6 @@ const A = {
 
   venture: '/assets/logos/logo-ventures.svg',
 
-  // GitHub'da şu dosya olmalı:
-  // public/assets/mockups/phone-frame.svg
   phoneFrame: '/assets/mockups/phone-frame.svg',
 
   // Kart logoları
