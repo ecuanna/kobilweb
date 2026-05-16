@@ -1255,3 +1255,374 @@ details p {
     flex-direction: column;
   }
 }
+
+/* RESOURCES / INSIGHTS PAGE */
+
+.insightsPage {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+.insightsPage::before {
+  content: '';
+  position: absolute;
+  top: 126px;
+  left: 50%;
+  width: 1610px;
+  height: 878px;
+  transform: translateX(-25%) rotate(27deg) skewX(-18deg);
+  background: linear-gradient(
+    90deg,
+    rgba(62, 191, 252, 0.18),
+    rgba(41, 98, 246, 0.16),
+    rgba(202, 128, 244, 0.12)
+  );
+  border-radius: 48px;
+  pointer-events: none;
+}
+
+.insightsHero {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100% - 160px));
+  margin: 0 auto;
+  padding: 186px 0 42px;
+}
+
+.insightsHero > div {
+  display: grid;
+  grid-template-columns: 597px 492px;
+  justify-content: space-between;
+  align-items: end;
+  gap: 80px;
+}
+
+.insightsHero h1 {
+  margin: 0;
+  font: 700 40px / 50px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.insightsHero p {
+  margin: 0;
+  font: 400 20px / 26px 'Instrument Sans', sans-serif;
+  color: #3d4c6a;
+}
+
+.insightsPanel {
+  position: relative;
+  z-index: 2;
+  width: min(1360px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 48px 60px 138px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.insightsTabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.insightsTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.insightsTabs button {
+  height: 56px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--soft);
+  color: var(--ink);
+  font: 600 16px / 20px Inter, sans-serif;
+  padding: 0 24px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.insightsTabs button.active {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 58px;
+}
+
+.insightCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insightImage {
+  aspect-ratio: 600 / 370;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #dfe6f3;
+}
+
+.insightImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insightImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 98, 246, 0.15);
+  pointer-events: none;
+}
+
+.insightMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.insightTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.insightTag,
+.insightLanguage {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font: 600 14px / 20px 'Instrument Sans', sans-serif;
+  white-space: nowrap;
+}
+
+.insightTag {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  background: #ffffff;
+}
+
+.insightLanguage {
+  color: #3d4c6a;
+  background: var(--bg);
+}
+
+.insightMeta time {
+  font: 400 14px / 20px 'Instrument Sans', sans-serif;
+  color: #3d4c6a;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.insightCard h2 {
+  margin: 0;
+  font: 700 32px / 42px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.insightCard p {
+  margin: 0;
+  font: 400 16px / 23px 'Instrument Sans', sans-serif;
+  color: var(--muted);
+}
+
+.insightsCta {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 160px));
+  height: 442px;
+  margin: -478px auto 56px;
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #eef3fb;
+}
+
+.insightsCta > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insightsCta > div {
+  position: relative;
+  z-index: 1;
+  width: min(977px, 90%);
+}
+
+.insightsCta h2 {
+  margin: 0;
+  font: 700 40px / 50px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.insightsCta p {
+  margin: 24px 0 48px;
+  font: 400 18px / 26px 'Instrument Sans', sans-serif;
+  color: var(--ink);
+}
+
+.insightsCtaActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.insightsFooter {
+  position: relative;
+  z-index: 2;
+}
+
+/* INSIGHTS RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .insightsHero {
+    width: calc(100% - 64px);
+    padding-top: 140px;
+  }
+
+  .insightsHero > div {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .insightsPanel {
+    width: calc(100% - 64px);
+    padding: 40px 32px 120px;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .insightsCta {
+    width: calc(100% - 64px);
+    margin-top: -420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .insightsPage::before {
+    top: 96px;
+    width: 900px;
+    height: 520px;
+    transform: translateX(-30%) rotate(24deg) skewX(-18deg);
+  }
+
+  .insightsHero {
+    width: calc(100% - 32px);
+    padding: 96px 0 32px;
+  }
+
+  .insightsHero h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .insightsHero p {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .insightsPanel {
+    width: calc(100% - 32px);
+    padding: 24px 18px 80px;
+  }
+
+  .insightsTabs {
+    margin-bottom: 32px;
+  }
+
+  .insightsTabs button {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .insightMeta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .insightMeta time {
+    text-align: left;
+  }
+
+  .insightCard h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .insightCard p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .insightsCta {
+    width: calc(100% - 32px);
+    min-height: 360px;
+    height: auto;
+    margin: -40px auto 32px;
+    padding: 56px 20px;
+    border-radius: 14px;
+  }
+
+  .insightsCta h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .insightsCta p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .insightsCtaActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .insightsHero h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .insightsPanel {
+    border-radius: 10px;
+  }
+
+  .insightTags {
+    max-width: 100%;
+  }
+
+  .insightTag,
+  .insightLanguage {
+    min-height: 28px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
